@@ -18,7 +18,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun,Github,Send,Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export default function MenuBar() {
@@ -39,20 +39,17 @@ export default function MenuBar() {
       </div>
       <div className="flex">
         <MenubarMenu>
-          <MenubarTrigger>RESUME</MenubarTrigger>
+          <MenubarTrigger className="cursor-pointer hover:bg-secondary"><Github className="h-[1.2rem] w-[1.2rem]" /></MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>WORKS</MenubarTrigger>
+          <MenubarTrigger className="cursor-pointer hover:bg-secondary"><Send  className="h-[1.2rem] w-[1.2rem]"/></MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>BLOG</MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger>CONTACT</MenubarTrigger>
+          <MenubarTrigger className="cursor-pointer hover:bg-secondary"><Mail  className="h-[1.2rem] w-[1.2rem]"/></MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu >
           <div
-            className="inline-flex items-center justify-center p-2 border border-background rounded cursor-pointer bg-background ml-10"
+            className="inline-flex hover:bg-secondary items-center justify-center p-2 border border-background rounded cursor-pointer bg-background ml-10"
             onClick={toggleTheme}
           >
             <Sun
