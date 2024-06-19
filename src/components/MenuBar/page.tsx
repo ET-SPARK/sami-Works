@@ -1,14 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
 import {
   Menubar,
   MenubarContent,
@@ -18,8 +10,9 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { Moon, Sun,Github,Send,Mail } from "lucide-react";
+import { Moon, Sun, Github, Send, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function MenuBar() {
   const { theme, setTheme } = useTheme();
@@ -31,23 +24,36 @@ export default function MenuBar() {
     setIsDark(!isDark);
   };
   return (
-    <Menubar className="border-x-0 border-t-0 border-b rounded-none flex justify-between">
+    <Menubar className="border-x-0 border-t-0 border-b rounded-none flex justify-between py-6">
       <div>
         <MenubarMenu>
           <MenubarTrigger>LOGO</MenubarTrigger>
         </MenubarMenu>
       </div>
-      <div className="flex">
+      <div className="flex items-center">
         <MenubarMenu>
-          <MenubarTrigger className="cursor-pointer hover:bg-secondary"><Github className="h-[1.2rem] w-[1.2rem]" /></MenubarTrigger>
+          <Link href="https://github.com/ET-SPARK">
+            <MenubarTrigger className="cursor-pointer hover:bg-secondary">
+              <Github className="h-[1.2rem] w-[1.2rem]" />
+            </MenubarTrigger>
+          </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger className="cursor-pointer hover:bg-secondary"><Send  className="h-[1.2rem] w-[1.2rem]"/></MenubarTrigger>
+          <Link href="http://t.me/rAsSpark">
+            <MenubarTrigger className="cursor-pointer hover:bg-secondary">
+              <Mail className="h-[1.2rem] w-[1.2rem]" />
+            </MenubarTrigger>
+          </Link>
+        </MenubarMenu>
+
+        <MenubarMenu>
+          <Link href="mailto:samuelwoyesso2016@gmail.com">
+            <MenubarTrigger className="cursor-pointer hover:bg-secondary">
+              <Send className="h-[1.2rem] w-[1.2rem]" />
+            </MenubarTrigger>
+          </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger className="cursor-pointer hover:bg-secondary"><Mail  className="h-[1.2rem] w-[1.2rem]"/></MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu >
           <div
             className="inline-flex hover:bg-secondary items-center justify-center p-2 border border-background rounded cursor-pointer bg-background ml-10"
             onClick={toggleTheme}
