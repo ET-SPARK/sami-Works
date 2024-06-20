@@ -13,6 +13,8 @@ import {
 import { Moon, Sun, Github, Send, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
+import LogoImage from "../../../public/logo.png"
 
 export default function MenuBar() {
   const { theme, setTheme } = useTheme();
@@ -24,10 +26,17 @@ export default function MenuBar() {
     setIsDark(!isDark);
   };
   return (
-    <Menubar className="border-x-0 border-t-0 border-b rounded-none flex justify-between py-6">
+    <Menubar className="border-x-0 border-t-0 border-b rounded-none flex justify-between py-8 items-center">
       <div>
         <MenubarMenu>
-          <MenubarTrigger>LOGO</MenubarTrigger>
+          <Link href="/">
+            <Image
+              src={LogoImage}
+              width={150}
+              height={100}
+              alt="logo"
+            />
+          </Link>  
         </MenubarMenu>
       </div>
       <div className="flex items-center">
