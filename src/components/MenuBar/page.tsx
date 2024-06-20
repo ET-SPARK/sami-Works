@@ -56,7 +56,6 @@ export default function MenuBar() {
             </MenubarTrigger>
           </Link>
         </MenubarMenu>
-
         <MenubarMenu>
           <Link href="mailto:samuelwoyesso2016@gmail.com">
             <MenubarTrigger className="cursor-pointer hover:bg-secondary">
