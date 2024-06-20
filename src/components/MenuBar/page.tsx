@@ -14,7 +14,8 @@ import { Moon, Sun, Github, Send, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-import LogoImage from "../../../public/logo.png"
+import LogoImage from "../../../public/logo.png";
+import { motion } from "framer-motion";
 
 export default function MenuBar() {
   const { theme, setTheme } = useTheme();
@@ -30,13 +31,14 @@ export default function MenuBar() {
       <div>
         <MenubarMenu>
           <Link href="/">
-            <Image
-              src={LogoImage}
-              width={150}
-              height={100}
-              alt="logo"
-            />
-          </Link>  
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {" "}
+              <Image src={LogoImage} width={150} height={100} alt="logo" />
+            </motion.button>
+          </Link>
         </MenubarMenu>
       </div>
       <div className="flex items-center">
