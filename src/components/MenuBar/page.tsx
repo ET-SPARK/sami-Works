@@ -36,7 +36,7 @@ export default function MenuBar() {
               whileTap={{ scale: 0.9 }}
             >
               {" "}
-              <Image src={LogoImage} width={150} height={100} alt="logo" />
+              <Image src={LogoImage} width={120} height={100} alt="logo" />
             </motion.button>
           </Link>
         </MenubarMenu>
