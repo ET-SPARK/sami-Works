@@ -14,7 +14,7 @@ import { Moon, Sun, Github, Send, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-import LogoImage from "../../../public/logo.png";
+import LogoImage from "../../../public/logo.svg";
 import { motion } from "framer-motion";
 
 export default function MenuBar() {
@@ -27,7 +27,7 @@ export default function MenuBar() {
     setIsDark(!isDark);
   };
   return (
-    <Menubar className="border-x-0 border-t-0 border-b rounded-none flex justify-between py-8 items-center">
+    <Menubar className="border-x-0 border-t-0 border-b rounded-none flex justify-between py-8 items-center sticky top-0">
       <div>
         <MenubarMenu>
           <Link href="/">

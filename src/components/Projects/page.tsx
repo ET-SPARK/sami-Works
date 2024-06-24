@@ -13,8 +13,12 @@ import SImage from "../../../public/image.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
+import { Protest_Revolution } from "next/font/google";
 
-
+const julius = Protest_Revolution({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 function Projects() {
   const myProject = [
@@ -79,9 +83,9 @@ function Projects() {
   return (
     <div className="mt-10">
       <div className="text-center font-semibold uppercase text-4xl py-10">
-        Projects
+        <p className={julius.className}> Projects</p>
       </div>
-      <div className="grid grid-cols-3 px-4 gap-4">
+      <div className="grid grid-cols-3 px-4 gap-4 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
         {myProject.map((project, index) => (
           <Card key={index}>
             <CardHeader>
