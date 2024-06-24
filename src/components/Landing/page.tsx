@@ -2,6 +2,12 @@ import { FileText, Hand } from "lucide-react";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { Jacquard_12_Charted } from "next/font/google";
+
+const shadows = Jacquard_12_Charted({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 function Landing() {
   return (
@@ -13,9 +19,12 @@ function Landing() {
           </div>
           <div className="">Hi, I'm Samuel</div>
         </div>
-        <div className="mt-4 text-xl font-light">
-          Passionate fullstack developer, coding enthusiast & problem solver.
-          Always striving for elegant solutions.
+        <div className={shadows.className}>
+          <p className="text-[32px]">
+            {" "}
+            Passionate fullstack developer, coding enthusiast & problem solver.
+            Always striving for elegant solutions.
+          </p>
         </div>
         <div className="mt-10">
           <Link href="https://drive.google.com/uc?export=download&id=1eaxWvQ5IH9Ze9uEQNy0tfk1eBRn8IwAD">
