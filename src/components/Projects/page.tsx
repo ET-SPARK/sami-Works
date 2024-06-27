@@ -82,7 +82,7 @@ function Projects() {
 
   return (
     <div className="mt-10">
-      <div className="text-center font-semibold uppercase text-4xl py-10">
+      <div className="text-center font-semibold uppercase text-4xl py-10 drop-shadow-white">
         <p className={julius.className}> Projects</p>
       </div>
       <div className="grid grid-cols-3 px-4 gap-4 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
