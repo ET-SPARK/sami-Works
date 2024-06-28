@@ -56,14 +56,14 @@ export default function MenuBar() {
           </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <Link href="http://t.me/rAsSpark">
+          <Link href="mailto:samuelwoyesso2016@gmail.com">
             <MenubarTrigger className="cursor-pointer hover:bg-secondary">
               <Mail className="h-[1.2rem] w-[1.2rem]" />
             </MenubarTrigger>
           </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <Link href="mailto:samuelwoyesso2016@gmail.com">
+          <Link href="http://t.me/rAsSpark">
             <MenubarTrigger className="cursor-pointer hover:bg-secondary">
               <Send className="h-[1.2rem] w-[1.2rem]" />
             </MenubarTrigger>
