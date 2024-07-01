@@ -50,28 +50,28 @@ export default function MenuBar() {
       <div className="flex items-center">
         <MenubarMenu>
           <Link href="https://github.com/ET-SPARK">
-            <MenubarTrigger className="cursor-pointer hover:bg-secondary">
+            <MenubarTrigger className="cursor-pointer hover:drop-shadow-white hover:shadow-4xl hover:shadow-white bg-background">
               <Github className="h-[1.2rem] w-[1.2rem]" />
             </MenubarTrigger>
           </Link>
         </MenubarMenu>
         <MenubarMenu>
           <Link href="mailto:samuelwoyesso2016@gmail.com">
-            <MenubarTrigger className="cursor-pointer hover:bg-secondary">
+            <MenubarTrigger className="cursor-pointer hover:drop-shadow-white hover:shadow-4xl hover:shadow-white bg-background">
               <Mail className="h-[1.2rem] w-[1.2rem]" />
             </MenubarTrigger>
           </Link>
         </MenubarMenu>
         <MenubarMenu>
           <Link href="http://t.me/rAsSpark">
-            <MenubarTrigger className="cursor-pointer hover:bg-secondary">
+            <MenubarTrigger className="cursor-pointer hover:drop-shadow-white hover:shadow-4xl hover:shadow-white bg-background">
               <Send className="h-[1.2rem] w-[1.2rem]" />
             </MenubarTrigger>
           </Link>
         </MenubarMenu>
         <MenubarMenu>
           <div
-            className="inline-flex hover:bg-secondary items-center justify-center p-2 border border-background rounded cursor-pointer bg-background ml-10"
+            className="inline-flex hover:drop-shadow-white hover:shadow-4xl hover:shadow-white items-center justify-center p-1 border border-background rounded cursor-pointer bg-background ml-10"
             onClick={toggleTheme}
           >
             <Sun

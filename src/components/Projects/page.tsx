@@ -158,12 +158,12 @@ function Projects() {
                 </div>
               </CardHeader>
             </div>
-            <CardContent>
-              <CardDescription className="border-t pt-4 line-clamp-5 h-48">
+            <CardContent className="px-2">
+              <CardDescription className="border-t pt-4  line-clamp-5 h-48">
                 {project.description}
               </CardDescription>
             </CardContent>
-            <CardFooter className="border-t pt-4">
+            <CardFooter className="border-t pt-4 px-2">
               {project.type[0].site && (
                 <Link
                   href={project.type[0].site}
