@@ -12,6 +12,7 @@ import Image from "next/image";
 import SImage from "../../../public/image.png";
 import Disney from "../../../public/projectImage/disney.png";
 import Lumax from "../../../public/projectImage/lumax.png";
+import Movie from "../../../public/projectImage/movie.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -54,14 +55,14 @@ function Projects() {
         "A Weather Forecast App that provides users with up-to-date weather information. It includes features like real-time weather updates, forecasts, and weather alerts to help users plan their activities accordingly.",
     },
     {
-      image: SImage,
-      title: "Project Management Tool",
-      badge: ["react", "redux", "node", "express"],
+      image: Movie,
+      title: "Hulu-Movie",
+      badge: ["React Native", "Tailwind css", "themoviedb AP"],
       type: [
         {
-          site: "https://project-management-tool.com",
-          apk: "",
-          source: "https://github.com/username/project-management-tool",
+          site: "",
+          apk: "https://expo.dev/artifacts/eas/o8HuSKAuvDkNZJd8iuk3SL.apk",
+          source: "https://github.com/ET-SPARK/Hulu-Movie",
         },
       ],
       description:
@@ -139,7 +140,7 @@ function Projects() {
                 alt="image"
                 width={400}
                 height={400}
-                className="rounded-xl "
+                className="rounded-xl"
               />
               <CardTitle>{project.title}</CardTitle>
               <div className="flex justify-between uppercase pt-4">
