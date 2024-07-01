@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import SImage from "../../../public/image.png";
 import Disney from "../../../public/projectImage/disney.png";
+import Lumax from "../../../public/projectImage/lumax.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -39,14 +40,14 @@ function Projects() {
         "This project is a faithful reproduction of Walt Disney's website, meticulously recreated using React, Redux, Styled-components, and Firebase. It serves as an educational and nostalgic tribute to Disney's legacy in entertainment and culture.",
     },
     {
-      image: SImage,
-      title: "Weather Forecast App",
-      badge: ["angular", "typescript"],
+      image: Lumax,
+      title: "LUMAX Property",
+      badge: ["React", "Node", "Express", "MongoDB"],
       type: [
         {
-          site: "https://weather-forecast-app.com",
+          site: "",
           apk: "",
-          source: "https://github.com/username/weather-forecast-app",
+          source: "https://github.com/ET-SPARK/Lumax",
         },
       ],
       description:
@@ -138,7 +139,7 @@ function Projects() {
                 alt="image"
                 width={400}
                 height={400}
-                className="rounded-xl"
+                className="rounded-xl "
               />
               <CardTitle>{project.title}</CardTitle>
               <div className="flex justify-between uppercase pt-4">
