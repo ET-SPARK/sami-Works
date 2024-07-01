@@ -131,24 +131,33 @@ function Projects() {
       <div className="text-center font-semibold uppercase text-4xl py-10 drop-shadow-white">
         <p className={julius.className}>Projects</p>
       </div>
-      <div className="grid grid-cols-3 px-4 gap-4 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
+      <div className="grid grid-cols-3 px-4 gap-6 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
         {myProject.map((project, index) => (
           <Card key={index}>
-            <CardHeader>
+            <div className="relative">
               <Image
                 src={project.image}
                 alt="image"
-                width={400}
+                style={{ width: "100%" }}
                 height={400}
-                className="rounded-xl"
+                className="blur-md shadow-2xl absolute"
               />
-              <CardTitle>{project.title}</CardTitle>
-              <div className="flex justify-between uppercase pt-4">
-                {project.badge.map((badge, idx) => (
-                  <Badge key={idx}>{badge}</Badge>
-                ))}
-              </div>
-            </CardHeader>
+              <CardHeader className="px-1 pt-1">
+                <Image
+                  src={project.image}
+                  alt="image"
+                  style={{ width: "100%" }}
+                  height={400}
+                  className="rounded-xl z-10 "
+                />
+                <CardTitle className="pt-4">{project.title}</CardTitle>
+                <div className="flex justify-between uppercase pt-4">
+                  {project.badge.map((badge, idx) => (
+                    <Badge key={idx}>{badge}</Badge>
+                  ))}
+                </div>
+              </CardHeader>
+            </div>
             <CardContent>
               <CardDescription className="border-t pt-4 line-clamp-5 h-48">
                 {project.description}
