@@ -25,8 +25,8 @@ function Projects() {
   const myProject = [
     {
       image: SImage,
-      title: "LMS",
-      badge: ["vue", "shadcn-vue", "nuxt", "supabase"],
+      title: "Walt Disney Clone",
+      badge: ["React", "Redux", "Styled-components", "Firebase"],
       type: [
         {
           site: "https://desiny-plus.web.app/",
@@ -35,7 +35,7 @@ function Projects() {
         },
       ],
       description:
-        "A Learning Management System (LMS) is a software application designed to manage, deliver, and track educational courses or training programs.",
+        "This project is a faithful reproduction of Walt Disney's website, meticulously recreated using React, Redux, Styled-components, and Firebase. It serves as an educational and nostalgic tribute to Disney's legacy in entertainment and culture.",
     },
     {
       image: SImage,
