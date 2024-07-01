@@ -10,6 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import SImage from "../../../public/image.png";
+import Disney from "../../../public/projectImage/disney.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -24,7 +25,7 @@ const julius = Protest_Revolution({
 function Projects() {
   const myProject = [
     {
-      image: SImage,
+      image: Disney,
       title: "Walt Disney Clone",
       badge: ["React", "Redux", "Styled-components", "Firebase"],
       type: [
