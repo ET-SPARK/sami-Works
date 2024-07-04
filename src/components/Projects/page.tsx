@@ -141,8 +141,7 @@ function Projects() {
                 src={project.image}
                 alt="image"
                 style={{ width: "100%" }}
-                height={400}
-                className="blur-md shadow-2xl absolute"
+                className="blur-md shadow-2xl absolute h-[220px]"
               />
               <CardHeader className="px-1 pt-1">
                 <Image
