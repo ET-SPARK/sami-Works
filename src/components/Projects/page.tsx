@@ -13,6 +13,8 @@ import SImage from "../../../public/image.png";
 import Disney from "../../../public/projectImage/disney.png";
 import Lumax from "../../../public/projectImage/lumax.png";
 import Movie from "../../../public/projectImage/movie.png";
+import Fogera from "../../../public/projectImage/fogera.png";
+import Ecommerce from "../../../public/projectImage/ecommerce.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -69,28 +71,28 @@ function Projects() {
         "A Project Management Tool designed to help teams plan, track, and manage their projects effectively. It provides features like task assignments, progress tracking, and collaboration tools, ensuring projects are completed on time and within budget.",
     },
     {
-      image: SImage,
-      title: "E-commerce Platform",
-      badge: ["next.js", "tailwindcss", "mongodb"],
+      image: Fogera,
+      title: "Mini Fogera Food delivery",
+      badge: ["React Native", "Firebase", "Chapa", "Map"],
       type: [
         {
-          site: "https://ecommerce-platform.com",
-          apk: "",
-          source: "https://github.com/username/ecommerce-platform",
+          site: "",
+          apk: "https://apk-link.com/social-media-app",
+          source: "https://github.com/ET-SPARK/Mini-Fogera-food-delivery-app",
         },
       ],
       description:
         "An E-commerce Platform that allows businesses to set up and manage online stores. It offers features like product listings, shopping cart, payment processing, and order management to streamline the online shopping experience.",
     },
     {
-      image: SImage,
-      title: "Social Media App",
-      badge: ["flutter", "firebase"],
+      image: Ecommerce,
+      title: "Ecommerce",
+      badge: ["Next", "Sanity", "React Context", "Stripe"],
       type: [
         {
           site: "",
-          apk: "https://apk-link.com/social-media-app",
-          source: "https://github.com/username/social-media-app",
+          apk: "",
+          source: "https://github.com/ET-SPARK/ecommerce",
         },
       ],
       description:
@@ -147,8 +149,7 @@ function Projects() {
                   src={project.image}
                   alt="image"
                   style={{ width: "100%" }}
-                  height={400}
-                  className="rounded-xl z-10 "
+                  className="rounded-xl z-10 h-[200px] "
                 />
                 <CardTitle className="pt-4">{project.title}</CardTitle>
                 <div className="flex justify-between uppercase pt-4">
