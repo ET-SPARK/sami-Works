@@ -15,6 +15,7 @@ import Lumax from "../../../public/projectImage/lumax.png";
 import Movie from "../../../public/projectImage/movie.png";
 import Fogera from "../../../public/projectImage/fogera.png";
 import Ecommerce from "../../../public/projectImage/ecommerce.png";
+import Amazone from "../../../public/projectImage/amazone.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -99,13 +100,13 @@ function Projects() {
         "A Social Media App developed to connect people and facilitate social interactions. It includes features like user profiles, posts, comments, and messaging, making it easy to share and communicate with others.",
     },
     {
-      image: SImage,
-      title: "Fitness Tracker",
-      badge: ["react native", "expo", "firebase"],
+      image: Amazone,
+      title: "Amazone Clone",
+      badge: ["react ", "redux", "firebase", "stripe"],
       type: [
         {
           site: "",
-          apk: "https://apk-link.com/fitness-tracker",
+          apk: "",
           source: "https://github.com/username/fitness-tracker",
         },
       ],
