@@ -16,6 +16,7 @@ import Movie from "../../../public/projectImage/movie.png";
 import Fogera from "../../../public/projectImage/fogera.png";
 import Ecommerce from "../../../public/projectImage/ecommerce.png";
 import Amazone from "../../../public/projectImage/amazone.png";
+import Booking from "../../../public/projectImage/booking.png"
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -73,7 +74,7 @@ function Projects() {
     },
     {
       image: Fogera,
-      title: "Mini Fogera Food delivery",
+      title: "Engocha Food delivery",
       badge: ["React Native", "Firebase", "Chapa", "Map"],
       type: [
         {
@@ -114,14 +115,14 @@ function Projects() {
         "A Fitness Tracker App designed to help users monitor their fitness activities, set goals, and track progress. It includes features like workout logging, goal setting, and activity tracking to support a healthy lifestyle.",
     },
     {
-      image: SImage,
-      title: "Online Booking System",
-      badge: ["django", "postgresql"],
+      image: Booking,
+      title: "Hulu-Booking",
+      badge: ["React Native", "redux", "mongoDb"],
       type: [
         {
-          site: "https://online-booking-system.com",
-          apk: "",
-          source: "https://github.com/username/online-booking-system",
+          site: "",
+          apk: "https://drive.google.com/file/d/1qVpGPaKbojtuqmB1yAlgJVA49pJZi_0X/view?usp=sharing",
+          source: "https://github.com/ET-SPARK/Hulu-Booking-App",
         },
       ],
       description:
