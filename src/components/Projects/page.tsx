@@ -16,7 +16,9 @@ import Movie from "../../../public/projectImage/movie.png";
 import Fogera from "../../../public/projectImage/fogera.png";
 import Ecommerce from "../../../public/projectImage/ecommerce.png";
 import Amazone from "../../../public/projectImage/amazone.png";
-import Booking from "../../../public/projectImage/booking.png"
+import Booking from "../../../public/projectImage/booking.png";
+import Jobs from "../../../public/projectImage/jobs.png";
+import Threads from "../../../public/projectImage/threads.png";
 import ApkIcon from "../../../public/apk.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
@@ -65,7 +67,7 @@ function Projects() {
       type: [
         {
           site: "",
-          apk: "https://expo.dev/artifacts/eas/o8HuSKAuvDkNZJd8iuk3SL.apk",
+          apk: "https://drive.google.com/file/d/1U1IXKDkobp9Wz7kg6EEdtT9eLywzi_0o/view?usp=sharing",
           source: "https://github.com/ET-SPARK/Hulu-Movie",
         },
       ],
@@ -123,6 +125,34 @@ function Projects() {
           site: "",
           apk: "https://drive.google.com/file/d/1qVpGPaKbojtuqmB1yAlgJVA49pJZi_0X/view?usp=sharing",
           source: "https://github.com/ET-SPARK/Hulu-Booking-App",
+        },
+      ],
+      description:
+        "An Online Booking System that enables businesses to manage bookings and reservations. It offers features like calendar integration, automated reminders, and payment processing to streamline the booking process.",
+    },
+    {
+      image: Jobs,
+      title: "Hulu-Jobs",
+      badge: ["React Native", "rapid API"],
+      type: [
+        {
+          site: "",
+          apk: "https://drive.google.com/file/d/18Om-Y22_e3nhpRbos4kQC1we23kGkHKC/view?usp=sharing",
+          source: "https://github.com/ET-SPARK/Hulu-Job",
+        },
+      ],
+      description:
+        "An Online Booking System that enables businesses to manage bookings and reservations. It offers features like calendar integration, automated reminders, and payment processing to streamline the booking process.",
+    },
+    {
+      image: Threads,
+      title: "Threads-Clone",
+      badge: ["React Native", "MongoDb"],
+      type: [
+        {
+          site: "",
+          apk: "",
+          source: "https://github.com/ET-SPARK/Threads-clone-app",
         },
       ],
       description:
