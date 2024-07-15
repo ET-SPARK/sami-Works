@@ -9,8 +9,7 @@ function Landing() {
       <div className="text-center mt-10">
         <div className="flex justify-center text-[64px] font-light items-center">
           <div className="flex">
-            {" "}
-            <div> Hi, I'm</div>{" "}
+            <div> Hi, I'm</div>
             <div className="drop-shadow-white ml-2">Samuel</div>
           </div>
         </div>
