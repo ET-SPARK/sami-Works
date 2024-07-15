@@ -33,7 +33,7 @@ function Projects() {
     {
       image: Disney,
       title: "Walt Disney Clone",
-      badge: ["React", "Redux", "Styled-components", "Firebase"],
+      badge: ["React", "Redux", "Firebase"],
       type: [
         {
           site: "https://desiny-plus.web.app/",
@@ -201,8 +201,8 @@ function Projects() {
   ];
 
   return (
-    <div className="mt-10">
-      <div className="text-center font-semibold uppercase text-4xl py-10 drop-shadow-white">
+    <div className="mt-10 max-[640px]:mt-4">
+      <div className="text-center font-semibold uppercase text-4xl max-[640px]:text-[24px] py-10 drop-shadow-white">
         Projects
       </div>
       <div className="grid grid-cols-3 px-4 gap-6 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
@@ -222,20 +222,24 @@ function Projects() {
                   style={{ width: "100%" }}
                   className="rounded-xl z-10 h-[200px] "
                 />
-                <CardTitle className="pt-4">{project.title}</CardTitle>
+                <CardTitle className="pt-4 max-[640px]:text-[16px]">
+                  {project.title}
+                </CardTitle>
                 <div className="flex justify-between uppercase pt-4">
                   {project.badge.map((badge, idx) => (
-                    <Badge key={idx}>{badge}</Badge>
+                    <Badge key={idx} className="max-[640px]:text-[11px]">
+                      {badge}
+                    </Badge>
                   ))}
                 </div>
               </CardHeader>
             </div>
             <CardContent className="px-2">
-              <CardDescription className="border-t pt-4  line-clamp-5 h-48">
+              <CardDescription className="border-t pt-4 text-justify  h-48 max-[640px]:h-64">
                 {project.description}
               </CardDescription>
             </CardContent>
-            <CardFooter className="border-t pt-4 px-2">
+            <CardFooter className="border-t pt-4 px-2 max-[640px]:text-[11px]">
               {project.type[0].site && (
                 <Link
                   href={project.type[0].site}
