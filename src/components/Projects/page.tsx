@@ -25,13 +25,8 @@ import Spotify from "../../../public/projectImage/spotify.webp";
 import Uber from "../../../public/projectImage/uber.webp";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
-import { Protest_Revolution } from "next/font/google";
-import Link from "next/link";
 
-const julius = Protest_Revolution({
-  subsets: ["latin"],
-  weight: "400",
-});
+import Link from "next/link";
 
 function Projects() {
   const myProject = [
@@ -208,7 +203,7 @@ function Projects() {
   return (
     <div className="mt-10">
       <div className="text-center font-semibold uppercase text-4xl py-10 drop-shadow-white">
-        <p className={julius.className}>Projects</p>
+        Projects
       </div>
       <div className="grid grid-cols-3 px-4 gap-6 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
         {myProject.map((project, index) => (
