@@ -50,7 +50,7 @@ function Projects() {
       badge: ["React", "Node", "Express", "MongoDB"],
       type: [
         {
-          site: "",
+          site: "https://lumax.vercel.app/",
           apk: "",
           source: "https://github.com/ET-SPARK/Lumax",
         },
