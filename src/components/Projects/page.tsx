@@ -79,7 +79,7 @@ function Projects() {
       type: [
         {
           site: "",
-          apk: "",
+          apk: "https://drive.google.com/file/d/1FEhXW-Ewi0880RKMnNK4dCM7eBCLQwnw/view?usp=sharing",
           source: "https://github.com/ET-SPARK/Mini-Fogera-food-delivery-app",
         },
       ],
