@@ -20,6 +20,8 @@ import Booking from "../../../public/projectImage/booking.png";
 import Jobs from "../../../public/projectImage/jobs.png";
 import Threads from "../../../public/projectImage/threads.png";
 import Tesla from "../../../public/projectImage/tesla.png";
+import Dire from "../../../public/projectImage/dire.png";
+import Arkwood from "../../../public/projectImage/arkwood.png";
 import ApkIcon from "../../../public/apk.png";
 import Spotify from "../../../public/projectImage/spotify.webp";
 import Uber from "../../../public/projectImage/uber.webp";
@@ -199,11 +201,140 @@ function Projects() {
         "The Tesla-Clone project, built with React Native, aims to replicate the sleek and innovative experience of the official Tesla app. With a focus on a responsive user interface, the app allows users to explore vehicle features, manage their electric vehicles, and access charging station information. This project showcases the ability to create a modern, user-friendly mobile application that reflects the cutting-edge technology of Tesla.",
     },
   ];
+  const myWork = [
+    {
+      image: Dire,
+      title: "LMS for AK tube",
+      badge: ["Adinet ICT Solutions"],
+      type: [
+        {
+          site: "",
+          apk: "",
+          source: "",
+        },
+      ],
+      description:
+        "Developing Learning management system for AK Tube by transforming their learning system from YouTube to a web-based portal. This system includes key functionalities such as course management admin panel for teachers, interactive course modules, evaluation and realtime progress tracking for learners. Additional features include such as user authentication, data storage and retrieval, responsive user interface, payment integration and discussion forums",
+    },
+    {
+      image: Dire,
+      title: "HRMS for Dire-MFI",
+      badge: ["Adinet ICT Solutions"],
+      type: [
+        {
+          site: "https://hr.diremfi.com",
+          apk: "",
+          source: "",
+        },
+      ],
+      description:
+        "Human Resources Management Systems (HRMS) for Dire Microfinance Institution.This involved tailoring the system to meet the unique needs of the organization, including configuring workflows, creating custom modules, and integrating various functionalities to streamline HR processes such as employee Recruitment, Onboarding, Attendance, Leave and Offboarding. I worked closely with stakeholders to understand their requirements, ensuring that the system was not only technically sound but also user-friendly and efficient, ultimately enhancing the overall HR operations within the organization.",
+    },
+    {
+      image: Arkwood,
+      title: "Arkwood Mobile App",
+      badge: ["ETHIO ARKWOOD ENTERTAINMENT."],
+      type: [
+        {
+          site: "",
+          apk: "Coming soon!",
+          source: "",
+        },
+      ],
+      description:
+        "I developed a cross-platform mobile streaming app for Amharic movies, supporting both iOS and Android. The app offers multiple payment options in ETB and USD, with support for both one-time payments and subscription packages. It includes multilingual support, push notifications, an advanced search and filtering system, and a watch history feature for user convenience. Additionally, the app ensures secure streaming with protection against screen recording, providing users with a reliable and seamless experience for enjoying on-demand Amharic films.",
+    },
+  ];
 
   return (
     <div className="mt-10 max-[640px]:mt-4">
+      <div className="text-center font-semibold uppercase text-4xl max-[640px]:text-[24px] py-10 drop-shadow-white ">
+        My Works
+      </div>
+      <div className="grid grid-cols-3 px-4 gap-6 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
+        {myWork.map((project, index) => (
+          <Card key={index} className="border-yellow-500">
+            <div className="relative">
+              <Image
+                src={project.image}
+                alt="image"
+                style={{ width: "100%" }}
+                className="blur-md shadow-2xl absolute h-[220px]"
+              />
+              <CardHeader className="px-1 pt-1">
+                <Image
+                  src={project.image}
+                  alt="image"
+                  style={{ width: "100%" }}
+                  className="rounded-xl z-10 h-[200px] "
+                />
+                <CardTitle className="pt-4 max-[640px]:text-[16px]">
+                  {project.title}
+                </CardTitle>
+                <div className="flex justify-between uppercase pt-4">
+                  {project.badge.map((badge, idx) => (
+                    <Badge
+                      key={idx}
+                      className="max-[640px]:text-[11px] bg-yellow-500"
+                    >
+                      {badge}
+                    </Badge>
+                  ))}
+                </div>
+              </CardHeader>
+            </div>
+            <CardContent className="px-2">
+              <CardDescription className="border-t pt-4 text-justify  h-64 max-[640px]:h-auto">
+                {project.description}
+              </CardDescription>
+            </CardContent>
+            <CardFooter className="border-t pt-4 px-2 max-[640px]:text-[11px]">
+              {project.type[0].site && (
+                <Link
+                  href={project.type[0].site}
+                  passHref
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-yellow-500">
+                    <Globe className="h-[1.2rem] w-[1.2rem] mr-2" />
+                    Site
+                  </Button>
+                </Link>
+              )}
+              {project.type[0].apk && (
+                <Link
+                  href={project.type[0].apk}
+                  passHref
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="ml-2 bg-yellow-500">
+                    <FileCode className="h-[1.2rem] w-[1.2rem] mr-2" />
+                    APK File
+                  </Button>
+                </Link>
+              )}
+              {project.type[0].source && (
+                <Link
+                  href={project.type[0].source}
+                  passHref
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="ml-2 bg-yellow-500">
+                    <Github className="h-[1.2rem] w-[1.2rem] mr-2" />
+                    Source
+                  </Button>
+                </Link>
+              )}
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+
       <div className="text-center font-semibold uppercase text-4xl max-[640px]:text-[24px] py-10 drop-shadow-white">
-        Projects
+        My Projects
       </div>
       <div className="grid grid-cols-3 px-4 gap-6 max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
         {myProject.map((project, index) => (
