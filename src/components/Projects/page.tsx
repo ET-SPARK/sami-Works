@@ -22,6 +22,7 @@ import Threads from "../../../public/projectImage/threads.png";
 import Tesla from "../../../public/projectImage/tesla.png";
 import Dire from "../../../public/projectImage/dire.png";
 import Arkwood from "../../../public/projectImage/arkwood.png";
+import ak from "../../../public/projectImage/ak.png";
 import ApkIcon from "../../../public/apk.png";
 import Spotify from "../../../public/projectImage/spotify.webp";
 import Uber from "../../../public/projectImage/uber.webp";
@@ -203,7 +204,7 @@ function Projects() {
   ];
   const myWork = [
     {
-      image: Dire,
+      image: ak,
       title: "LMS for AK tube",
       badge: ["Adinet ICT Solutions"],
       type: [
