@@ -22,6 +22,7 @@ import Threads from "../../../public/projectImage/threads.png";
 import Tesla from "../../../public/projectImage/tesla.png";
 import Dire from "../../../public/projectImage/dire.png";
 import Arkwood from "../../../public/projectImage/arkwood.png";
+import Awards from "../../../public/projectImage/award.png";
 import ak from "../../../public/projectImage/ak.png";
 import ApkIcon from "../../../public/apk.png";
 import Spotify from "../../../public/projectImage/spotify.webp";
@@ -34,7 +35,7 @@ import Link from "next/link";
 function Projects() {
   const myProject = [
     {
-      image: Disney,
+      image: Awards,
       title: "Award Wining Website ",
       badge: ["React Vite", "GSAP", "tailwindcss"],
       type: [
@@ -45,7 +46,7 @@ function Projects() {
         },
       ],
       description:
-        "The Walt Disney website clone, built with React, Redux, Styled-components, and Firebase, delivers a dynamic and interactive user experience. React ensures smooth navigation, Redux manages state efficiently, and Styled-components provide a modular design, while Firebase offers secure backend services. This project showcases advanced web development skills in creating a robust Disney site replication.",
+        "The website leverages a cutting-edge technology stack comprising React Vite, Tailwind CSS and GSAP. Its standout animations include smooth transitions, interactive elements responding to user actions, and advanced effects like parallax scrolling and 3D sequences, creating a captivating experience. These features, combined with its engaging interactivity and memorable design, ensure an exceptional user experience and have earned it recognition from Awwwards as a Site of the Month.",
     },
     {
       image: Disney,
