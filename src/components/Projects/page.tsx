@@ -35,6 +35,20 @@ function Projects() {
   const myProject = [
     {
       image: Disney,
+      title: "Award Wining Website ",
+      badge: ["React Vite", "GSAP", "tailwindcss"],
+      type: [
+        {
+          site: "https://award-winning-website-delta.vercel.app/",
+          apk: "",
+          source: "https://github.com/ET-SPARK/Award-winning-website",
+        },
+      ],
+      description:
+        "The Walt Disney website clone, built with React, Redux, Styled-components, and Firebase, delivers a dynamic and interactive user experience. React ensures smooth navigation, Redux manages state efficiently, and Styled-components provide a modular design, while Firebase offers secure backend services. This project showcases advanced web development skills in creating a robust Disney site replication.",
+    },
+    {
+      image: Disney,
       title: "Walt Disney Clone",
       badge: ["React", "Redux", "Firebase"],
       type: [
