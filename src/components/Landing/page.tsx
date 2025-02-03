@@ -18,7 +18,7 @@ function Landing() {
           Always striving for elegant solutions.
         </div>
         <div className="mt-10 max-[640px]:text-[24px]">
-          <Link href="https://drive.google.com/uc?export=download&id=1o6QZhEvWYEns9e97DQ7DvNsMLV7EjHMs">
+          <Link href="https://drive.google.com/uc?export=download&id=1qecc6FugNdhWTlW5qmwGSAH_QyR4bEbD">
             <Button className="uppercase ">
               <FileText className="mr-2 " />
               Download Resume
