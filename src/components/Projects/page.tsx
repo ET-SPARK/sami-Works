@@ -27,6 +27,7 @@ import ak from "../../../public/projectImage/ak.png";
 import ApkIcon from "../../../public/apk.png";
 import Spotify from "../../../public/projectImage/spotify.webp";
 import Uber from "../../../public/projectImage/uber.webp";
+import DPO from "../../../public/projectImage/dpo.png";
 import { Button } from "../ui/button";
 import { FileCode, Github, Globe } from "lucide-react";
 
@@ -253,12 +254,25 @@ function Projects() {
       type: [
         {
           site: "",
-          apk: "Coming soon!",
+          apk: "",
           source: "",
         },
       ],
       description:
         "I developed a cross-platform mobile streaming app for Amharic movies, supporting both iOS and Android. The app offers multiple payment options in ETB and USD, with support for both one-time payments and subscription packages. It includes multilingual support, push notifications, an advanced search and filtering system, and a watch history feature for user convenience. Additionally, the app ensures secure streaming with protection against screen recording, providing users with a reliable and seamless experience for enjoying on-demand Amharic films.",
+    },
+    {
+      image: DPO,
+      title: "Development For Peace Organization (DPO) Website",
+      badge: ["Cross Light Africa"],
+      type: [
+        {
+          site: "https://devforpeace.org/",
+          apk: "",
+          source: "",
+        },
+      ],
+      description: "Developed a customized web-based platform for Development for Peace Organization, a national and international NGO. Delivered end-to-end solutions that streamline operational workflows and enable seamless data integration across country programs. Tailored dashboards for program management, implemented secure user authentication, and built modules for reporting, partner engagement, and internal communication. Provided a scalable and secure digital infrastructure aligned with the organization’s humanitarian and development missions."
     },
   ];
 
