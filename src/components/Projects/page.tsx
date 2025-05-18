@@ -326,7 +326,7 @@ export default function Projects() {
   ]
 
   // Get unique tags for filtering
-  const allTags = [...new Set(allProjects.flatMap((project) => project.tags))]
+  const allTags = Array.from(new Set(allProjects.flatMap(project => project.tags)))
   const [selectedTags, setSelectedTags] = useState<string[]>([])
 
   // Filter projects based on search and tags
