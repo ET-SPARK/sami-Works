@@ -1,22 +1,109 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FileCode, Github, Globe, ExternalLink } from "lucide-react"
-import { motion } from "framer-motion"
-import { Input } from "../ui/input"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FileCode, Github, Globe, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
+import { Input } from "../ui/input";
 
 export default function Projects() {
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Combined projects data
   const allProjects = [
     // Professional Work
+    {
+      category: "work",
+      image: "/projectImage/GebeyaZoneLogo.png",
+      title: "Gebeya Zone – Local Manufacturing Marketplace",
+      badge: ["GEBEYA ZONE"],
+      type: [
+        {
+          site: "",
+          apk: "https://play.google.com/store/apps/details?id=com.gebeyatech.gebeyazone&hl=en",
+          source: "",
+        },
+      ],
+      tags: ["Marketplace Platform", "Bidding System"],
+      description:
+        "Gebeya Zone is a personal business project designed to empower Ethiopian creators and manufacturers through a transparent, request-based marketplace. The platform allows customers to post custom product requests while local manufacturers compete through bids, ensuring fair pricing, quality competition, and direct buyer–maker connections. By digitizing custom production workflows, the solution strengthens local manufacturing, supports small businesses, and delivers tailored products to customers across Ethiopia.",
+    },
+
+    {
+      category: "work",
+      image: "/projectImage/AgriveriLogo.png",
+      title: "Agriveri Services PLC Website & ERP Customization",
+      badge: ["AGRIVERI SERVICES PLC"],
+      type: [
+        {
+          site: "https://agriveri.et/",
+          apk: "",
+          source: "",
+        },
+      ],
+      tags: ["Web Development", "Odoo ERP", "Agriculture", "EUDR Compliance"],
+      description:
+        "Developed a modern, responsive website for Agriveri Services PLC, an Ethiopian company enhancing agricultural value chains through verification and pre-certification services. Customized Odoo ERP modules—primarily CRM and Project Management—to streamline operations, manage clients, and track certification projects. Also contributed as a data engineer, building farm plot management and traceability tools to support compliance with global standards such as EUDR, Global G.A.P., Organic certification, and carbon offset programs for smallholder farmers.",
+    },
+    {
+      category: "work",
+      image: "/projectImage/AgrivanceLogo.png",
+      title: "Agrivance Partners PLC Digital Platform & ERP",
+      badge: ["AGRIVANCE PARTNERS PLC"],
+      type: [
+        {
+          site: "",
+          apk: "",
+          source: "",
+        },
+      ],
+      tags: ["Web Development", "Odoo ERP", "CRM", "Energy & Agribusiness"],
+      description:
+        "Built the official website for Agrivance Partners PLC, an Ethiopian energy and agribusiness company producing Carinata seeds for Sustainable Aviation Fuel. Customized Odoo ERP CRM and Project modules to improve customer management, project tracking, and internal workflows. Supported digital transformation efforts aligning global climate commitments with local agricultural and economic development.",
+    },
+    {
+      category: "work",
+      image: "/projectImage/AgrisphereLogo.png",
+      title: "Agrisphere Coffee Trade Website",
+      badge: ["AGRISPHERE"],
+      type: [
+        {
+          site: "https://agrisphere.et/",
+          apk: "",
+          source: "",
+        },
+      ],
+      tags: ["Web Development", "Coffee Trade", "Agribusiness"],
+      description:
+        "Developed the Agrisphere website, a coffee trade facilitation and representation platform connecting Ethiopian coffee origins with global importers. Delivered a clean, responsive web experience that highlights coffee traceability, origin representation, and trade facilitation services, supporting Ethiopia’s specialty coffee export ecosystem.",
+    },
+    {
+      category: "work",
+      image: "/projectImage/AlmuyeLogo.png",
+      title: "Almuye Coffee Website",
+      badge: ["ALMUYE COFFEE"],
+      type: [
+        {
+          site: "https://almuyeecoffee.com/",
+          apk: "",
+          source: "",
+        },
+      ],
+      tags: ["Web Development", "Coffee Export", "Agriculture"],
+      description:
+        "Built a modern website for Almuye Coffee, focusing on brand visibility, coffee origin storytelling, and export readiness. The platform supports digital presence for coffee exporters and aligns with traceability and international market requirements.",
+    },
     {
       category: "work",
       image: "/projectImage/ArkwoodLogo.png",
@@ -323,40 +410,52 @@ export default function Projects() {
       description:
         "The Tesla-Clone project, built with React Native, aims to replicate the sleek and innovative experience of the official Tesla app. With a focus on a responsive user interface, the app allows users to explore vehicle features, manage their electric vehicles, and access charging station information. This project showcases the ability to create a modern, user-friendly mobile application that reflects the cutting-edge technology of Tesla.",
     },
-  ]
+  ];
 
   // Get unique tags for filtering
-  const allTags = Array.from(new Set(allProjects.flatMap(project => project.tags)))
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const allTags = Array.from(
+    new Set(allProjects.flatMap((project) => project.tags))
+  );
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   // Filter projects based on search and tags
   const filteredProjects = allProjects.filter((project) => {
     const matchesSearch =
       project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchQuery.toLowerCase())
+      project.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesTags = selectedTags.length === 0 || selectedTags.some((tag) => project.tags.includes(tag))
+    const matchesTags =
+      selectedTags.length === 0 ||
+      selectedTags.some((tag) => project.tags.includes(tag));
 
-    return matchesSearch && matchesTags
-  })
+    return matchesSearch && matchesTags;
+  });
 
   // Filter projects by category
-  const workProjects = filteredProjects.filter((project) => project.category === "work")
-  const personalProjects = filteredProjects.filter((project) => project.category === "personal")
+  const workProjects = filteredProjects.filter(
+    (project) => project.category === "work"
+  );
+  const personalProjects = filteredProjects.filter(
+    (project) => project.category === "personal"
+  );
 
   // Toggle tag selection
   const toggleTag = (tag: string) => {
     if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter((t) => t !== tag))
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
     } else {
-      setSelectedTags([...selectedTags, tag])
+      setSelectedTags([...selectedTags, tag]);
     }
-  }
+  };
 
   // Project card component
   const ProjectCard = ({ project }: { project: (typeof allProjects)[0] }) => {
     return (
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <Card className="h-full overflow-hidden group hover:shadow-lg transition-all duration-300 border-yellow-500/20 hover:border-yellow-500">
           <div className="relative overflow-hidden">
             <div className="absolute inset-0 bg-black/20 z-10"></div>
@@ -371,16 +470,32 @@ export default function Projects() {
             </div>
             <div className="absolute top-2 right-2 z-20 flex gap-1">
               {project.type[0].site && (
-                <Link href={project.type[0].site} target="_blank" rel="noopener noreferrer">
-                  <Button size="icon" variant="outline" className="hover:bg-white w-8 h-8 rounded-full">
+                <Link
+                  href={project.type[0].site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    className="hover:bg-white w-8 h-8 rounded-full"
+                  >
                     <Globe className="h-4 w-4 text-yellow-600" />
                     <span className="sr-only">Visit Site</span>
                   </Button>
                 </Link>
               )}
               {project.type[0].source && (
-                <Link href={project.type[0].source} target="_blank" rel="noopener noreferrer">
-                  <Button size="icon" variant="outline" className=" hover:bg-white w-8 h-8 rounded-full">
+                <Link
+                  href={project.type[0].source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    className=" hover:bg-white w-8 h-8 rounded-full"
+                  >
                     <Github className="h-4 w-4 text-yellow-600" />
                     <span className="sr-only">View Source</span>
                   </Button>
@@ -390,7 +505,9 @@ export default function Projects() {
           </div>
 
           <CardHeader className="p-4">
-            <CardTitle className="line-clamp-1 text-xl">{project.title}</CardTitle>
+            <CardTitle className="line-clamp-1 text-xl">
+              {project.title}
+            </CardTitle>
             <div className="flex flex-wrap gap-1 mt-2">
               {project.badge.map((badge, idx) => (
                 <Badge
@@ -405,7 +522,9 @@ export default function Projects() {
           </CardHeader>
 
           <CardContent className="p-4 pt-0">
-            <p className="text-sm text-muted-foreground lg:h-[250px] sm:h-auto">{project.description}</p>
+            <p className="text-sm text-muted-foreground lg:h-[250px] sm:h-auto">
+              {project.description}
+            </p>
           </CardContent>
 
           <CardFooter className="p-4 pt-0 flex flex-wrap gap-2">
@@ -424,7 +543,12 @@ export default function Projects() {
           <div className="p-4 py-4 border-t">
             <div className="flex gap-2 flex-wrap">
               {project.type[0].site && (
-                <Link href={project.type[0].site} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Link
+                  href={project.type[0].site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
                   <Button
                     variant="outline"
                     className="w-full border-yellow-500 text-yellow-700 hover:bg-yellow-500 hover:text-white"
@@ -435,7 +559,12 @@ export default function Projects() {
                 </Link>
               )}
               {project.type[0].apk && (
-                <Link href={project.type[0].apk} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Link
+                  href={project.type[0].apk}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
                   <Button
                     variant="outline"
                     className="w-full border-yellow-500 text-yellow-700 hover:bg-yellow-500 hover:text-white"
@@ -446,7 +575,12 @@ export default function Projects() {
                 </Link>
               )}
               {project.type[0].source && (
-                <Link href={project.type[0].source} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Link
+                  href={project.type[0].source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
                   <Button
                     variant="outline"
                     className="w-full border-yellow-500 text-yellow-700 hover:bg-yellow-500 hover:text-white"
@@ -460,15 +594,18 @@ export default function Projects() {
           </div>
         </Card>
       </motion.div>
-    )
-  }
+    );
+  };
 
   return (
     <div className="container mx-auto py-16 px-4">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 text-yellow-600">My Portfolio</h1>
+        <h1 className="text-4xl font-bold mb-4 text-yellow-600">
+          My Portfolio
+        </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Showcasing my professional work and personal projects built with modern technologies
+          Showcasing my professional work and personal projects built with
+          modern technologies
         </p>
       </div>
 
@@ -491,8 +628,11 @@ export default function Projects() {
                 <Badge
                   key={tag}
                   variant={selectedTags.includes(tag) ? "default" : "outline"}
-                  className={`cursor-pointer ${selectedTags.includes(tag) ? "bg-yellow-500 hover:bg-yellow-600" : "hover:bg-yellow-100"
-                    }`}
+                  className={`cursor-pointer ${
+                    selectedTags.includes(tag)
+                      ? "bg-yellow-500 hover:bg-yellow-600"
+                      : "hover:bg-yellow-100"
+                  }`}
                   onClick={() => toggleTag(tag)}
                 >
                   {tag}
@@ -515,9 +655,15 @@ export default function Projects() {
       {/* Projects Tabs */}
       <Tabs defaultValue="all" className="w-full">
         <TabsList className="grid w-full grid-cols-3 mb-8">
-          <TabsTrigger value="all">All Projects ({filteredProjects.length})</TabsTrigger>
-          <TabsTrigger value="work">Professional Work ({workProjects.length})</TabsTrigger>
-          <TabsTrigger value="personal">Personal Projects ({personalProjects.length})</TabsTrigger>
+          <TabsTrigger value="all">
+            All Projects ({filteredProjects.length})
+          </TabsTrigger>
+          <TabsTrigger value="work">
+            Professional Work ({workProjects.length})
+          </TabsTrigger>
+          <TabsTrigger value="personal">
+            Personal Projects ({personalProjects.length})
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="all" className="mt-0">
@@ -528,13 +674,15 @@ export default function Projects() {
           </div>
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-lg text-muted-foreground">No projects match your search criteria.</p>
+              <p className="text-lg text-muted-foreground">
+                No projects match your search criteria.
+              </p>
               <Button
                 variant="outline"
                 className="mt-4"
                 onClick={() => {
-                  setSearchQuery("")
-                  setSelectedTags([])
+                  setSearchQuery("");
+                  setSelectedTags([]);
                 }}
               >
                 Clear filters
@@ -551,13 +699,15 @@ export default function Projects() {
           </div>
           {workProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-lg text-muted-foreground">No professional work projects match your search criteria.</p>
+              <p className="text-lg text-muted-foreground">
+                No professional work projects match your search criteria.
+              </p>
               <Button
                 variant="outline"
                 className="mt-4"
                 onClick={() => {
-                  setSearchQuery("")
-                  setSelectedTags([])
+                  setSearchQuery("");
+                  setSelectedTags([]);
                 }}
               >
                 Clear filters
@@ -574,13 +724,15 @@ export default function Projects() {
           </div>
           {personalProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-lg text-muted-foreground">No personal projects match your search criteria.</p>
+              <p className="text-lg text-muted-foreground">
+                No personal projects match your search criteria.
+              </p>
               <Button
                 variant="outline"
                 className="mt-4"
                 onClick={() => {
-                  setSearchQuery("")
-                  setSelectedTags([])
+                  setSearchQuery("");
+                  setSelectedTags([]);
                 }}
               >
                 Clear filters
@@ -590,5 +742,5 @@ export default function Projects() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
