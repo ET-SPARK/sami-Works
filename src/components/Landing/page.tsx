@@ -125,7 +125,7 @@ export default function Landing() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
           <Link
-            href="https://drive.google.com/uc?id=1nbtAghz8ABgEL9RReTWMiHHUTyGx6bCo"
+            href="https://drive.google.com/uc?id=1PLf1wCNz9PN7YEDHFC3r3xesKadfOFwk"
             target="_blank"
           >
             <Button

@@ -63,7 +63,7 @@ export default function Projects() {
       badge: ["AGRIVANCE PARTNERS PLC"],
       type: [
         {
-          site: "",
+          site: "https://agrivance.et/",
           apk: "",
           source: "",
         },
@@ -628,11 +628,10 @@ export default function Projects() {
                 <Badge
                   key={tag}
                   variant={selectedTags.includes(tag) ? "default" : "outline"}
-                  className={`cursor-pointer ${
-                    selectedTags.includes(tag)
+                  className={`cursor-pointer ${selectedTags.includes(tag)
                       ? "bg-yellow-500 hover:bg-yellow-600"
                       : "hover:bg-yellow-100"
-                  }`}
+                    }`}
                   onClick={() => toggleTag(tag)}
                 >
                   {tag}
